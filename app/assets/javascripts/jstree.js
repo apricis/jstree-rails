@@ -46,7 +46,7 @@
 
     _node.setAttribute('role', 'treeitem');
     _temp1 = _d.createElement('I');
-    _temp1.className = 'dropdown icon';
+    _temp1.className = 'sort descending icon';
     _temp1.setAttribute('role', 'presentation');
     _node.appendChild(_temp1);
     _temp1 = _d.createElement('A');
@@ -525,7 +525,7 @@
                     return this.nodeType === 3 && (!this.nodeValue || /^\s+$/.test(this.nodeValue));
                 })
                 .remove();
-            this.element.html("<" + "ul class='jstree-container-ul jstree-children' role='group'><" + "li id='j" + this._id + "_loading' class='jstree-initial-node jstree-loading jstree-leaf jstree-last' role='tree-item'><i class='dropdown icon'></i><" + "a class='jstree-anchor' href='#'><i class='jstree-icon jstree-themeicon-hidden'></i>" + this.get_string("Loading ...") + "</a></li></ul>");
+            this.element.html("<" + "ul class='jstree-container-ul jstree-children' role='group'><" + "li id='j" + this._id + "_loading' class='jstree-initial-node jstree-loading jstree-leaf jstree-last' role='tree-item'><i class='sort descending icon'></i><" + "a class='jstree-anchor' href='#'><i class='jstree-icon jstree-themeicon-hidden'></i>" + this.get_string("Loading ...") + "</a></li></ul>");
             this.element.attr('aria-activedescendant', 'j' + this._id + '_loading');
             this._data.core.li_height = this.get_container_ul().children("li").first().height() || 24;
             /**
@@ -3473,7 +3473,7 @@
             };
             var c = this.get_container_ul()[0].className;
             if (!skip_loading) {
-                this.element.html("<" + "ul class='" + c + "' role='group'><" + "li class='jstree-initial-node jstree-loading jstree-leaf jstree-last' role='treeitem' id='j" + this._id + "_loading'><i class='dropdown icon'></i><" + "a class='jstree-anchor' href='#'><i class='jstree-icon jstree-themeicon-hidden'></i>" + this.get_string("Loading ...") + "</a></li></ul>");
+                this.element.html("<" + "ul class='" + c + "' role='group'><" + "li class='jstree-initial-node jstree-loading jstree-leaf jstree-last' role='treeitem' id='j" + this._id + "_loading'><i class='sord descending icon'></i><" + "a class='jstree-anchor' href='#'><i class='jstree-icon jstree-themeicon-hidden'></i>" + this.get_string("Loading ...") + "</a></li></ul>");
                 this.element.attr('aria-activedescendant', 'j' + this._id + '_loading');
             }
             this.load_node('#', function(o, s) {
